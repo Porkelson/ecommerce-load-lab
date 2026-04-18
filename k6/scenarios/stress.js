@@ -41,8 +41,7 @@ export const options = {
   thresholds: stressThresholds,
 };
 
-// Per-VU token — acquired during VU init, not counted in metrics
-const token = (() => getTokenForVU())();
+let token;
 
 export function setup() {
   const productsRes = get('/api/products?page=0&size=100');
@@ -54,6 +53,7 @@ export function setup() {
 }
 
 export default function (data) {
+  if (!token) token = getTokenForVU();
   // Weight: 60% browse, 30% search, 10% checkout
   const roll = Math.random();
   if (roll < 0.6) {

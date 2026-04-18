@@ -50,8 +50,7 @@ export const options = {
   thresholds: spikeThresholds,
 };
 
-// Per-VU auth token
-const token = (() => getTokenForVU())();
+let token;
 
 export function setup() {
   const productsRes = get('/api/products?page=0&size=100');
@@ -63,6 +62,7 @@ export function setup() {
 }
 
 export default function (data) {
+  if (!token) token = getTokenForVU();
   // Flash sale pattern: 80% browse (people checking what's on sale)
   // 20% add to cart (people actually buying)
   if (Math.random() < 0.8) {

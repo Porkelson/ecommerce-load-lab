@@ -47,8 +47,10 @@ export const options = {
   thresholds: loadThresholds,
 };
 
-// Per-VU token acquired once during VU init (not counted in scenario metrics)
-const token = (() => getTokenForVU())();
+// Per-VU token — lazily acquired on first iteration, then reused.
+// Must NOT be an IIFE at module level: k6 parses the script with __VU=0,
+// which would try users[-1] and crash before any VU runs.
+let token;
 
 export function setup() {
   const productsRes = get('/api/products?page=0&size=100');
@@ -66,6 +68,7 @@ export function browseScenario(data) {
 }
 
 export function checkoutScenario(data) {
+  if (!token) token = getTokenForVU();
   checkout(token, data);
   sleep(1);
 }
