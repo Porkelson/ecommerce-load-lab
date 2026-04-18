@@ -1,0 +1,22 @@
+[
+  { "email": "testuser01@test.com", "password": "Password1!" },
+  { "email": "testuser02@test.com", "password": "Password1!" },
+  { "email": "testuser03@test.com", "password": "Password1!" },
+  { "email": "testuser04@test.com", "password": "Password1!" },
+  { "email": "testuser05@test.com", "password": "Password1!" },
+  { "email": "testuser06@test.com", "password": "Password1!" },
+  { "email": "testuser07@test.com", "password": "Password1!" },
+  { "email": "testuser08@test.com", "password": "Password1!" },
+  { "email": "testuser09@test.com", "password": "Password1!" },
+  { "email": "testuser10@test.com", "password": "Password1!" },
+  { "email": "testuser11@test.com", "password": "Password1!" },
+  { "email": "testuser12@test.com", "password": "Password1!" },
+  { "email": "testuser13@test.com", "password": "Password1!" },
+  { "email": "testuser14@test.com", "password": "Password1!" },
+  { "email": "testuser15@test.com", "password": "Password1!" },
+  { "email": "testuser16@test.com", "password": "Password1!" },
+  { "email": "testuser17@test.com", "password": "Password1!" },
+  { "email": "testuser18@test.com", "password": "Password1!" },
+  { "email": "testuser19@test.com", "password": "Password1!" },
+  { "email": "testuser20@test.com", "password": "Password1!" }
+]
