@@ -2,7 +2,7 @@
 
 A monorepo combining a **Spring Boot 3 e-commerce REST API** with a **k6 performance test suite**. Built as a QA engineering portfolio project demonstrating realistic load testing, JWT authentication flows, and observable performance characteristics.
 
-> Companion to: [Playwright E2E repo](https://github.com/olekk/recruitment-task-automated-tests)
+> Companion to: [Playwright E2E repo](https://github.com/Porkelson/playwright-recruitment)
 
 ---
 
